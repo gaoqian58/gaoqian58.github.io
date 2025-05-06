@@ -129,7 +129,7 @@ var b =year + "年" + moon +"月"+day+"日 星期"+week;
 return {a,b,year,moon,day,hour,minute,second,week,sjrq};
 }
 function trim(a){return a.replace(/^\s+|\s+$/g,"").replace(/[ ]/g,"").replace(time().year,"")}
-function hm_ys(b){if(b==0 || b>49 || isNaN(b)){return "hm-kjbj";}else{return ["hm-red","hm-blue","hm-green"][Math.floor(((b-1+Math.floor((b-1)/10))%6)/2)]}}
+function hm_ys(b){if(b==0 || b>49 || isNaN(b)){return "o hm-kjbj";}else{return ["o hm-red","o hm-blue","o hm-green"][Math.floor(((b-1+Math.floor((b-1)/10))%6)/2)]}}
 var lhc = {
     zodiac: ["鼠", "牛", "虎", "兔", "龙", "蛇", "马", "羊", "猴", "鸡", "狗", "猪"],
     getZodiac: function (year,num,a,b) {
