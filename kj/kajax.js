@@ -62,6 +62,7 @@ var obj = JSON.parse(myObj);
 var kjobj=trim(obj.k);
 var kjjg=kjobj.split(",");
 $("#q").text("2025"+kjjg[0]);
+ /*         
 //数据显示
 for (i = 0; i < kjjg.length; i++) {
 if(typeof kjjg[1] === "undefined" || isNaN(kjjg[1]) || kjjg[1].length<=1){kjjg[1]="香";};
@@ -75,6 +76,7 @@ $("#m"+i).text(kjjg[i]);
 $("#mx"+i).html(lhc.getZodiac("2025",kjjg[i],"xg",i-1));
 $("#w"+i).attr("class",hm_ys(kjjg[i]));
 //
+*/
 }
 //分析结束
       }
