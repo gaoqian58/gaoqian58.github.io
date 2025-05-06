@@ -1,10 +1,10 @@
 var xgwss=[
 "wss://zhibo3.dghmfcyy.com",
-“wss://zhibo3.yuexiawang.com”
+"wss://zhibo3.yuexiawang.com"
 ]；
 var xawss=[
 "wss://zhibo.dghmfcyy.com",
-“wss://zhibo.yuexiawang.com”
+"wss://zhibo.yuexiawang.com"
 ]；
 function check(i){
                 //方法一，用三元运算符
