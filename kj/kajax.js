@@ -59,11 +59,11 @@ if(num==0 || num>49 || isNaN(num)){return "<span style='margin-left:0.1rem;color
         return a.concat(b);
     },
 };
-function xgws(a) {
+
 var lockReconnect = false;//避免重复连接
 var tt;
     var ws;
-    var wsUrl = a[Math.floor(a.length*Math.random())]+":"+[880,881,882,883,884,885,886,887,889][Math.floor(9*Math.random())]+"/Ws.ashx?"+Date.now();
+    var wsUrl = xgwss[Math.floor(xgwss.length*Math.random())]+":"+[880,881,882,883,884,885,886,887,889][Math.floor(9*Math.random())]+"/Ws.ashx?"+Date.now();
     function createWebSocket(wsUrl) {
       try {
         ws = new WebSocket(wsUrl);
@@ -124,4 +124,3 @@ $("#w"+i).attr("class",hm_ys(kjjg[i]));
      },2000);
     }
   createWebSocket(wsUrl);
-}
