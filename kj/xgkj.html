@@ -94,6 +94,61 @@ a:hover{
   </tr>
 	</table>
 <script>
+
+function check(i){
+                //方法一，用三元运算符
+                var num;
+                i<10?num="0"+i:num=i;
+                return num;
+}
+function checkqs(i){
+                //方法一，用三元运算符
+                var num;
+if(i<10){num="00"+i;}
+else if(i<100){num="0"+i;}
+else {num=i;}
+return num;          
+}
+var weekArray = new Array("日", "一", "二", "三", "四", "五", "六");
+var weekdays = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+function time() {//时间调用
+var date = new Date();
+var year = date.getFullYear(); 
+var moon = check(date.getMonth()+1);//获取当前月份的日期 
+var day=check(date.getDate());
+var sjrq=year+"-"+moon+"-"+day;
+var hour= check(date.getHours());//得到小时数
+var minute= check(date.getMinutes());//得到分钟数
+var second= check(date.getSeconds());//得到秒数
+var week = weekArray[new Date(sjrq).getDay()];
+var a = hour + ":" + minute + ":" + second;
+var b =year + "年" + moon +"月"+day+"日 星期"+week;
+return {a,b,year,moon,day,hour,minute,second,week,sjrq};
+}
+function trim(a){return a.replace(/^\s+|\s+$/g,"").replace(/[ ]/g,"").replace(time().year,"")}
+function hm_ys(b){if(b==0 || b>49 || isNaN(b)){return "hm kjbj kjbjopacity";}else{return ["hm-red","hm-blue","hm-green"][Math.floor(((b-1+Math.floor((b-1)/10))%6)/2)]}}
+var lhc = {
+    zodiac: ["鼠", "牛", "虎", "兔", "龙", "蛇", "马", "羊", "猴", "鸡", "狗", "猪"],
+    getZodiac: function (year,num,a,b) {
+if(a=="xg"){
+var zodiackj= ["香","港","六","合","彩","开","奖"];
+} else  if(a=="xa"){
+var zodiackj= ["新","澳","六","合","彩","开","奖"];
+} else {
+var zodiackj= ["","连","接","","异","常",""];
+}
+if(num==0 || num>49 || isNaN(num)){return "<span style='margin-left:0.1rem;color:#808080;'>"+zodiackj[b]+"</span>";}else{
+        return this.getZodiacList(year)[(Number(num) - 1) % 12];}
+    },
+    getZodiacList: function (year) {
+        var startYear = 1924;
+        var index = (year - startYear) % 12;
+        var a = this.zodiac.slice(0, index + 1).reverse();
+        var b = this.zodiac.slice(index + 1).reverse();
+        return a.concat(b);
+    },
+};
+
 var lockReconnect = false;//避免重复连接
 var tt;
     var ws;
