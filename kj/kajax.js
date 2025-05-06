@@ -119,7 +119,6 @@ $("#w"+i).attr("class",hm_ys(kjjg[i]));
       //没连接上会一直重连，设置延迟避免请求过多
       tt && clearTimeout(tt);
       tt = setTimeout(function () {
-        xgAjax(xgurl);
         createWebSocket(url);
         lockReconnect = false;
      },2000);
