@@ -57,7 +57,10 @@ a:hover{
 .clipinner {position:relative;}
 
 .clipboardswf {position:absolute; left:0; top:0;}
-
+.hm-kjbj{background-color:#999999;color:#000000;}
+.hm-red{background-color:#e71607;color:#fff;}
+.hm-blue{background-color:#2389e9;color:#fff;}
+.hm-green{background-color:#1fb61d;color:#fff;}
 </style>
 <script type="text/javascript" src="/kj/jquery.min.js"></script>
 </HEAD>
@@ -126,7 +129,7 @@ var b =year + "年" + moon +"月"+day+"日 星期"+week;
 return {a,b,year,moon,day,hour,minute,second,week,sjrq};
 }
 function trim(a){return a.replace(/^\s+|\s+$/g,"").replace(/[ ]/g,"").replace(time().year,"")}
-function hm_ys(b){if(b==0 || b>49 || isNaN(b)){return "hm kjbj kjbjopacity";}else{return ["hm-red","hm-blue","hm-green"][Math.floor(((b-1+Math.floor((b-1)/10))%6)/2)]}}
+function hm_ys(b){if(b==0 || b>49 || isNaN(b)){return "hm-kjbj";}else{return ["hm-red","hm-blue","hm-green"][Math.floor(((b-1+Math.floor((b-1)/10))%6)/2)]}}
 var lhc = {
     zodiac: ["鼠", "牛", "虎", "兔", "龙", "蛇", "马", "羊", "猴", "鸡", "狗", "猪"],
     getZodiac: function (year,num,a,b) {
