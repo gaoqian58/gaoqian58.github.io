@@ -6,6 +6,20 @@ var xawss=[
 "wss://zhibo.dghmfcyy.com",
 “wss://zhibo.yuexiawang.com”
 ]；
+function time() {//时间调用
+var date = new Date();
+var year = date.getFullYear(); 
+var moon = check(date.getMonth()+1);//获取当前月份的日期 
+var day=check(date.getDate());
+var sjrq=year+"-"+moon+"-"+day;
+var hour= check(date.getHours());//得到小时数
+var minute= check(date.getMinutes());//得到分钟数
+var second= check(date.getSeconds());//得到秒数
+var week = weekArray[new Date(sjrq).getDay()];
+var a = hour + ":" + minute + ":" + second;
+var b =year + "年" + moon +"月"+day+"日 星期"+week;
+return {a,b,year,moon,day,hour,minute,second,week,sjrq};
+}
 function trim(a){return a.replace(/^\s+|\s+$/g,"").replace(/[ ]/g,"").replace(time().year,"")}
 function hm_ys(b){if(b==0 || b>49 || isNaN(b)){return "hm kjbj kjbjopacity";}else{return ["hm-red","hm-blue","hm-green"][Math.floor(((b-1+Math.floor((b-1)/10))%6)/2)]}}
 var lhc = {
