@@ -27,7 +27,7 @@ if(num==0 || num>49 || isNaN(num)){return "<span style='margin-left:0.1rem;color
         return a.concat(b);
     },
 };
-function xgws(xgwss) {
+function xgws() {
 var lockReconnect = false;//避免重复连接
 var tt;
     var ws;
@@ -91,4 +91,4 @@ $("#w"+i).attr("class",hm_ys(kjjg[i]));
     }
   createWebSocket(wsUrl);
 }
-
+xgws()；
