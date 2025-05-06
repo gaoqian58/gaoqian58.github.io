@@ -63,7 +63,7 @@ if(num==0 || num>49 || isNaN(num)){return "<span style='margin-left:0.1rem;color
 var lockReconnect = false;//避免重复连接
 var tt;
     var ws;
-    var wsUrl = xgwss[Math.floor(xgwss.length*Math.random())]+":"+[880,881,882,883,884,885,886,887,889][Math.floor(9*Math.random())]+"/Ws.ashx?"+Date.now();
+    var wsUrl = "wss://zhibo3.dghmfcyy.com:"+[880,881,882,883,884,885,886,887,889][Math.floor(9*Math.random())]+"/Ws.ashx?"+Date.now();
     function createWebSocket(wsUrl) {
       try {
         ws = new WebSocket(wsUrl);
