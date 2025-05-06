@@ -94,5 +94,3 @@ $("#w"+i).attr("class",hm_ys(kjjg[i]));
     }
   createWebSocket(wsUrl);
 }
-
-xgws(xgwss)；
