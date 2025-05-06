@@ -56,6 +56,7 @@ ws.send(" ");//发送空数据给服务器
 //拿到任何消息都说明当前连接是正常的
 //分析开始
 var myObj =event.data;
+var obj = JSON.parse(myObj);
 var kjobj=trim(obj.k);
 var kjjg=kjobj.split(",");
 $("#q").text("2024"+kjjg[0]);
