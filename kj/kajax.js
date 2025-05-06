@@ -89,10 +89,12 @@ ws.send(" ");//发送空数据给服务器
 //分析开始
 var myObj =event.data;
 var obj = JSON.parse(myObj);
+$("#q").text(obj);
+        /*  
 var kjobj=trim(obj.k);
 var kjjg=kjobj.split(",");
 $("#q").text("2025"+kjjg[0]);
- /*         
+        
 //数据显示
 for (i = 0; i < kjjg.length; i++) {
 if(typeof kjjg[1] === "undefined" || isNaN(kjjg[1]) || kjjg[1].length<=1){kjjg[1]="香";};
