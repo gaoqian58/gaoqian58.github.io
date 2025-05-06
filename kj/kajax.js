@@ -29,11 +29,11 @@ if(num==0 || num>49 || isNaN(num)){return "<span style='margin-left:0.1rem;color
         return a.concat(b);
     },
 };
-function xgws() {
+function xgws(a) {
 var lockReconnect = false;//避免重复连接
 var tt;
     var ws;
-    var wsUrl = xgwss[Math.floor(a.length*Math.random())]+":"+[880,881,882,883,884,885,886,887,889][Math.floor(9*Math.random())]+"/Ws.ashx?"+Date.now();
+    var wsUrl = a[Math.floor(a.length*Math.random())]+":"+[880,881,882,883,884,885,886,887,889][Math.floor(9*Math.random())]+"/Ws.ashx?"+Date.now();
     function createWebSocket(wsUrl) {
       try {
         ws = new WebSocket(wsUrl);
@@ -61,7 +61,7 @@ var myObj =event.data;
 var obj = JSON.parse(myObj);
 var kjobj=trim(obj.k);
 var kjjg=kjobj.split(",");
-$("#q").text("2024"+kjjg[0]);
+$("#q").text("2025"+kjjg[0]);
 //数据显示
 for (i = 0; i < kjjg.length; i++) {
 if(typeof kjjg[1] === "undefined" || isNaN(kjjg[1]) || kjjg[1].length<=1){kjjg[1]="香";};
@@ -72,7 +72,7 @@ if(typeof kjjg[5] === "undefined" || isNaN(kjjg[5]) || kjjg[5].length<=1){kjjg[5
 if(typeof kjjg[6] === "undefined" || isNaN(kjjg[6]) || kjjg[6].length<=1){kjjg[6]="开";};
 if(typeof kjjg[7] === "undefined" || isNaN(kjjg[7]) || kjjg[7].length<=1){kjjg[7]="奖";};
 $("#m"+i).text(kjjg[i]);
-$("#m"+i +"x").html(lhc.getZodiac("2025",kjjg[i],"xg",i-1));
+$("#mx"+i).html(lhc.getZodiac("2025",kjjg[i],"xg",i-1));
 $("#w"+i).attr("class",hm_ys(kjjg[i]));
 //
 }
@@ -94,4 +94,5 @@ $("#w"+i).attr("class",hm_ys(kjjg[i]));
     }
   createWebSocket(wsUrl);
 }
-xgws()；
+
+xgws(xgwss)；
