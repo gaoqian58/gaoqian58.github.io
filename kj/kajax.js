@@ -6,6 +6,22 @@ var xawss=[
 "wss://zhibo.dghmfcyy.com",
 “wss://zhibo.yuexiawang.com”
 ]；
+function check(i){
+                //方法一，用三元运算符
+                var num;
+                i<10?num="0"+i:num=i;
+                return num;
+}
+function checkqs(i){
+                //方法一，用三元运算符
+                var num;
+if(i<10){num="00"+i;}
+else if(i<100){num="0"+i;}
+else {num=i;}
+return num;          
+}
+var weekArray = new Array("日", "一", "二", "三", "四", "五", "六");
+var weekdays = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
 function time() {//时间调用
 var date = new Date();
 var year = date.getFullYear(); 
