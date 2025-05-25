@@ -1,31 +1,44 @@
-
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-  <meta charset="utf-8" />
-  <title>Swiper demo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-  <!-- Link Swiper's CSS -->
-  <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
-
-  <!-- Demo styles -->
-  <style>
-    html,
-    body {
-      position: relative;
-      height: 100%;
-    }
-
-    body {
-      background: #eee;
-      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-      font-size: 14px;
-      color: #000;
-      margin: 0;
-      padding: 0;
-    }
-
+<meta charset="UTF-8">
+<link rel="manifest" href="manifest.json">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link rel="stylesheet" href="https://gaoqian58.github.io/css/style.css">
+<link rel="stylesheet" href="https://gaoqian58.github.io/css/swiper-bundle.min.css" />
+<style>
+html{
+font-size:1rem;/* 18px=1rem */
+width:100%;
+background-color:var(--bg-gray-quat);
+background-color:#f6f7f8;
+}
+body {font-family: "Microsoft YaHei", tahoma, arial, sans-serif, "Hiragino Sans GB";
+max-width:480px;
+margin:0 auto;
+background-color:var(--bg-gray-quat);
+background-color:#f6f7f8;
+}
+ul,li{border:0;padding:0;margin:0;list-style:none;}
+a,a:visited {
+  color: inherit; /* 继承链接所在元素的字体颜色 */
+  text-decoration: none; /* 去掉下划线等文本修饰 */
+}
+main {
+width:100%;
+}
+.logo{
+width:100%;
+padding:0.5rem 0;
+background-image: linear-gradient(to right, #ffffff, #f0f0f0);
+}
+.logo img{
+padding: 0 0.5rem;
+width:6.44rem;
+height: 2.51rem;
+}
     .swiper {
       width: 100%;
       height: 100%;
@@ -46,27 +59,27 @@
       height: 100%;
       object-fit: cover;
     }
-  </style>
-</head>
-
-<body>
-  <!-- Swiper -->
+</style>
+<title>模版</title>
+  </head>
+  <body>
+<main>
+<div class="logo"><img src="https://gaoqian58.github.io/img/logo.webp"></div>
+ <!-- Swiper -->
   <div class="swiper mySwiper">
     <div class="swiper-wrapper">
-      <div class="swiper-slide">Slide 1</div>
-      <div class="swiper-slide">Slide 2</div>
-      <div class="swiper-slide">Slide 3</div>
-      <div class="swiper-slide">Slide 4</div>
-      <div class="swiper-slide">Slide 5</div>
-      <div class="swiper-slide">Slide 6</div>
-      <div class="swiper-slide">Slide 7</div>
-      <div class="swiper-slide">Slide 8</div>
-      <div class="swiper-slide">Slide 9</div>
+      <div class="swiper-slide"><img src="https://gaoqian58.github.io/img/swiper1.webp"></div>
+      <div class="swiper-slide"><img src="https://gaoqian58.github.io/img/swiper2.webp"></div>
+      <div class="swiper-slide"><img src="https://gaoqian58.github.io/img/swiper3.webp"></div>
+      <div class="swiper-slide"><img src="https://gaoqian58.github.io/img/swiper4.webp"></div>
+      <div class="swiper-slide"><img src="https://gaoqian58.github.io/img/swiper5.webp"></div>
+      <div class="swiper-slide"><img src="https://gaoqian58.github.io/img/swiper6.webp"></div>
     </div>
   </div>
 
-  <!-- Swiper JS -->
-  <script src="/js/swiper-bundle.min.js"></script>
+</main>
+
+<script src="https://gaoqian58.github.io/js/swiper-bundle.min.js"></script>
 
   <!-- Initialize Swiper -->
   <script>
@@ -79,6 +92,5 @@
       },
     });
   </script>
-</body>
-
+ </body>
 </html>
