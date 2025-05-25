@@ -152,6 +152,24 @@ text-align: center;
 <script src="https://gaoqian58.github.io/js/jquery-1.11.3.min.js"></script>
   </head>
   <body>
+<script>
+    !window.jQuery && insert("https://g.alicdn.com/ilw/cdnjs/jquery/1.8.3/jquery.min.js");
+	[[document,"ready"],[window,"resize"]].forEach((item,index,self)=>{
+		$(item[0]).on(item[1],function(){
+			var iScreen = $(window).innerWidth();if(iScreen>480){iScreen=480};
+			if(iScreen==360){
+				$("html").removeAttr("style");
+				//return;
+				 } else if(iScreen>360){
+				 var ifontSize =((iScreen / 360).toFixed(1) * 18).toFixed(2);
+				 } else {
+				 var ifontSize =((iScreen / 360).toFixed(2) * 18 * 0.7).toFixed(2);
+				 };
+			(ifontSize < 10) && (ifontSize = 10);
+			$("html").css("font-size",ifontSize+"px");
+		});
+	});
+  </script>
 <main>
 <div class="logo"><img src="https://gaoqian58.github.io/img/logo.webp"></div>
  <!-- Swiper -->
@@ -220,23 +238,6 @@ text-align: center;
         disableOnInteraction: false,
       },
     });
-
-    !window.jQuery && insert("https://g.alicdn.com/ilw/cdnjs/jquery/1.8.3/jquery.min.js");
-	[[document,"ready"],[window,"resize"]].forEach((item,index,self)=>{
-		$(item[0]).on(item[1],function(){
-			var iScreen = $(window).innerWidth();if(iScreen>480){iScreen=480};
-			if(iScreen==360){
-				$("html").removeAttr("style");
-				//return;
-				 } else if(iScreen>360){
-				 var ifontSize =((iScreen / 360).toFixed(1) * 18).toFixed(2);
-				 } else {
-				 var ifontSize =((iScreen / 360).toFixed(2) * 18 * 0.7).toFixed(2);
-				 };
-			(ifontSize < 10) && (ifontSize = 10);
-			$("html").css("font-size",ifontSize+"px");
-		});
-	});
   </script>
  </body>
 </html>
