@@ -72,13 +72,13 @@ padding-top: 0.8rem;
 }
 .z li{
 float:left;
-margin:0 0.25rem;
+margin:0 0.5rem;
 border-radius:0.8rem;
 /*box-shadow: 0px 1px 0px 1px rgba(0,0,0,0.3);*/
 }
 .z img{
-width:5rem;
-height: 5rem;
+width:5.5rem;
+height: 5.5rem;
 border-radius:0.8rem;
 }
 .index {
@@ -210,6 +210,23 @@ text-align: center;
         disableOnInteraction: false,
       },
     });
+
+    !window.jQuery && insert("https://g.alicdn.com/ilw/cdnjs/jquery/1.8.3/jquery.min.js");
+	[[document,"ready"],[window,"resize"]].forEach((item,index,self)=>{
+		$(item[0]).on(item[1],function(){
+			var iScreen = $(window).innerWidth();if(iScreen>480){iScreen=480};
+			if(iScreen==360){
+				$("html").removeAttr("style");
+				//return;
+				 } else if(iScreen>360){
+				 var ifontSize =((iScreen / 360).toFixed(1) * 18 * 0.97).toFixed(2);
+				 } else {
+				 var ifontSize =((iScreen / 360).toFixed(2) * 18).toFixed(2);
+				 };
+			(ifontSize < 10) && (ifontSize = 10);
+			$("html").css("font-size",ifontSize+"px");
+		});
+	});
   </script>
  </body>
 </html>
