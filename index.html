@@ -81,10 +81,17 @@ padding: 0.5rem 0;
 }
 .index .nr .right .bt{
 font-weight:700;
+text-overflow: ellipsis;
+white-space: nowrap; 
+overflow: hidden;
 }
 .index .nr .right .wz{
 padding-top:  0.5rem;
 color:#5B5B5B;
+display: -webkit-box;  /*  display: -webkit-box; 必须结合的属性 ，将对象作为弹性伸缩盒子模型显示  */
+-webkit-box-orient: vertical; /*  -webkit-box-orient 必须结合的属性 ，设置或检索伸缩盒对象的子元素的排列方式  */
+-webkit-line-clamp: 4; /*  -webkit-line-clamp用来限制在一个块元素显示的文本的行数 */
+overflow: hidden;
 }
 .index .nr img {
 width:7.1rem;
@@ -132,7 +139,7 @@ text-align: center;
 <div class="index">
 <div class="nr">
 <div class="left"><img src="https://gaoqian58.github.io/img/nr1.webp"></div>
-<div class="right"><div class="bt">Chào mừng hội viên VIP...</div><div class="wz">Trân trọng gửi đến Quý thành viên VIP,Liên minh ABCVIP U888 xin gửi lời chà...</div></div>
+<div class="right"><div class="bt">Chào mừng hội viên VIP dfsdfdsfdsfsdfssdfdsfds</div><div class="wz">Trân trọng gửi đến Quý thành viên VIP,Liên minh ABCVIP U888 xin gửi lời chà  Trân trọng gửi đến Quý thành viên VIP,Liên minh ABCVIP U888 xin gửi lời chà</div></div>
 </div>
 </div>
 
