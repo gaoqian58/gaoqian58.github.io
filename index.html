@@ -238,6 +238,18 @@ text-align: center;
         disableOnInteraction: false,
       },
     });
+
+var allItemList = document.querySelectorAll(".z li img");
+for (var i=0;i<allItemList.length;i++) {
+allItemList[i].index=i;  //定义循环的每一个i的值                 
+allItemList[i].onmouseover=function() {
+for (var z=0;z<allItemList.length;z++) { 
+allItemList[z].style.width="4.5rem";
+allItemList[z].style.height="4.5rem";
+}
+allItemList[this.index].style.width="4.6rem";
+allItemList[this.index].style.height="4.6rem";
+}}
   </script>
  </body>
 </html>
