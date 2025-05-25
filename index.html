@@ -220,9 +220,9 @@ text-align: center;
 				$("html").removeAttr("style");
 				//return;
 				 } else if(iScreen>360){
-				 var ifontSize =((iScreen / 360).toFixed(1) * 18 * 0.97).toFixed(2);
+				 var ifontSize =((iScreen / 360).toFixed(1) * 18 * 0.9).toFixed(2);
 				 } else {
-				 var ifontSize =((iScreen / 360).toFixed(2) * 18).toFixed(2);
+				 var ifontSize =((iScreen / 360).toFixed(2) * 18 * 0.8).toFixed(2);
 				 };
 			(ifontSize < 10) && (ifontSize = 10);
 			$("html").css("font-size",ifontSize+"px");
