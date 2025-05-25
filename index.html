@@ -63,12 +63,12 @@ height: 2.51rem;
 .z {
 width:100%;
 padding-top: 0.8rem;
-  
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .z ul{
+
 }
 .z li{
 float:left;
@@ -77,8 +77,8 @@ border-radius:0.8rem;
 /*box-shadow: 0px 1px 0px 1px rgba(0,0,0,0.3);*/
 }
 .z img{
-width:5rem;
-height: 5rem;
+width:4.5rem;
+height: 4.5rem;
 border-radius:0.8rem;
 }
 .index {
@@ -105,9 +105,11 @@ font-weight:700;
 text-overflow: ellipsis;
 white-space: nowrap; 
 overflow: hidden;
+font-size:0.95rem;
 }
 .index .nr .right .wz{
-padding-top:  0.5rem;
+font-size:0.8rem;
+padding-top:  0.3rem;
 color:#5B5B5B;
 display: -webkit-box;  /*  display: -webkit-box; 必须结合的属性 ，将对象作为弹性伸缩盒子模型显示  */
 -webkit-box-orient: vertical; /*  -webkit-box-orient 必须结合的属性 ，设置或检索伸缩盒对象的子元素的排列方式  */
@@ -115,8 +117,8 @@ display: -webkit-box;  /*  display: -webkit-box; 必须结合的属性 ，将对
 overflow: hidden;
 }
 .index .nr img {
-width:7.1rem;
-height: 8.7rem;
+width:6rem;
+height: 7.1rem;
 border-radius:0.8rem;
 }
 .bottom {
@@ -130,13 +132,13 @@ width:100%;
 .bottom .a{
 padding: 0.8rem;
 color:#5B5B5B;
-font-size:0.8rem;
+font-size:0.6rem;
 border-bottom: 1px solid #F0F0F0;
 }
 .bottom .b{
 padding: 0.8rem;
 color:#5B5B5B;
-font-size:0.8rem;
+font-size:0.6rem;
 text-align: center;
 }
 </style>
@@ -220,7 +222,7 @@ text-align: center;
 				$("html").removeAttr("style");
 				//return;
 				 } else if(iScreen>360){
-				 var ifontSize =((iScreen / 360).toFixed(1) * 18 * 0.9).toFixed(2);
+				 var ifontSize =((iScreen / 360).toFixed(1) * 18).toFixed(2);
 				 } else {
 				 var ifontSize =((iScreen / 360).toFixed(2) * 18 * 0.8).toFixed(2);
 				 };
